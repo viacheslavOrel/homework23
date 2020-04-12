@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./dist/module/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/style.css">
+</head>
+<body class="p-0">
+<div class="card col-12 col-sm-8 m-auto p-0" id="loginFormHost">
+    <div class="card-header">
+        Войти
+    </div>
+    <div class="card-body">
+        <form>
+            <div class="form-group">
+                <label for="regDataInputEmail">Логин: </label>
+                <input name="mail" type="email" class="form-control" id="regDataInputEmail" autocomplete="username" required>
+            </div>
+            <div class="form-group">
+                <label for="regDataInputPassword">Пароль: </label>
+                <input name="password" type="password" class="form-control" id="regDataInputPassword" autocomplete="current-password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" hidden></span>
+                Войти
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="card col-12 col-sm-8 m-auto p-0" id="taskCreationCard" hidden>
+    <div class="card-header">
+        Новая задача
+    </div>
+    <div class="card-body">
+        <form>
+            <div class="form-group">
+                <label for="taskInputContent">Задача: </label>
+                <textarea id="taskInputContent" class="form-control" name="value" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="taskInputPriority">Приоритет: </label>
+                <input name="priority" id="taskInputPriority" required type="number" min="1" max="3" value="1">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <button type="reset" class="btn btn-danger col m-2">Очистить</button>
+                    <button type="submit" class="btn btn-success col m-2">
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" hidden></span>
+                        Добавить
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card col-12 col-sm-8 mt-2 ml-auto mr-auto p-0"  id="taskListCard" hidden>
+    <div class="card-header">
+        Спсисок задач
+    </div>
+    <ul class="list-group">
+    </ul>
+</div>
+
+<script src="dist/script.js"></script>
+</body>
+</html>
